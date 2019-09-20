@@ -1,5 +1,8 @@
 import React from 'react'
-import { Layout, Typography } from 'antd'
+import { Layout } from 'antd'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import Dashboard from './components/Dashboard'
 
 const { Content, Sider } = Layout
 
@@ -10,7 +13,10 @@ const App = () => {
 
       <Layout>
         <Content style={{ padding: '16px' }}>
-          <Typography.Title type="primary">Workime app</Typography.Title>
+
+          <Router>
+            <Route component={Dashboard} path="/dashboard" />
+          </Router>
         </Content>
       </Layout>
     </Layout>
