@@ -1,12 +1,14 @@
 import React from 'react'
 import { Layout } from 'antd'
 
+import WorkimeSidebar from '../Sidebar'
+
 const WorkimeLayout = ({ children }) => {
-  const { Content, Sider } = Layout
+  const { Content } = Layout
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <Sider collapsed></Sider>
+      <WorkimeSidebar />
 
       <Layout>
         <Content style={{ padding: '16px' }}>{children}</Content>
