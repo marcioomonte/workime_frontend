@@ -1,18 +1,22 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Typography } from 'antd'
 
-import Dashboard from './components/Dashboard'
 import Login from './components/Login'
-import PageNotFound from './components/UI/PageNotFound'
-import User from './components/User'
+
+const Dashboard = React.lazy(() => import('./components/Dashboard'))
+const PageNotFound = React.lazy(() => import('./components/UI/PageNotFound'))
+const User = React.lazy(() => import('./components/User'))
 
 const App = () => {
   return (
     <Router>
-      <Route exact component={Login} path="/" />
-      <Route component={Dashboard} path="/dashboard" />
-      <Route component={User} path="/user" />
-      <Route component={PageNotFound} />
+      <React.Suspense fallback={<Typography.Title>Loading...</Typography.Title>}>
+        <Route exact component={Login} path="/" />
+        <Route component={Dashboard} path="/dashboard" />
+        <Route component={User} path="/user" />
+        <Route component={PageNotFound} />
+      </React.Suspense>
     </Router>
   )
 }
