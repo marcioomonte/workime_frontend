@@ -1,10 +1,10 @@
-import React from 'react'
-import { Layout } from 'antd'
+import React from 'react';
+import { Layout } from 'antd';
 
-import WorkimeSidebar from '../Sidebar'
+import WorkimeSidebar from '../Sidebar';
 
 const WorkimeLayout = ({ children }) => {
-  const { Content } = Layout
+  const { Content } = Layout;
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -14,7 +14,7 @@ const WorkimeLayout = ({ children }) => {
         <Content style={{ padding: '16px' }}>{children}</Content>
       </Layout>
     </Layout>
-  )
-}
+  );
+};
 
-export default WorkimeLayout
+export default WorkimeLayout;
