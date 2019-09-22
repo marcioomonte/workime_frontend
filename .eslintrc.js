@@ -27,6 +27,7 @@ module.exports = {
           'warn',
           { extensions: ['.jsx','.js']}
         ],
-        'import/prefer-default-export': 'off'
+        'import/prefer-default-export': 'off',
+        'eslint-disable-next-line react/prop-types' :'off'
   },
 };
