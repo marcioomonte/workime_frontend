@@ -1,14 +1,14 @@
-import React from 'react'
-import { Typography } from 'antd'
+import React from 'react';
+import { Typography } from 'antd';
 
-import WorkimeLayout from '../UI/Layout'
+import WorkimeLayout from '../UI/Layout';
 
-const User = () => {
-  return (
+const { Title } = Typography;
+
+const User = () => (
     <WorkimeLayout>
-      <Typography.Title type="primary">User</Typography.Title>
+        <Title type="primary">User</Title>
     </WorkimeLayout>
-  )
-}
+);
 
-export default User
+export default User;
