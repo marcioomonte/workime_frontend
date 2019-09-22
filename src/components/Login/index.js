@@ -21,18 +21,21 @@ const Login = ({ form }) => {
         <LoginContainer>
           <Card
             bordered={false}
-            style={{ width: '35%' }}
+            style={{ width: '35%', maxWidth: '400px' }}
             title={<img src="../assets/logo.svg" alt="logo" />}
           >
             <Form
-              style={{ display: 'flex', flexDirection: 'column' }}
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+              }}
               onSubmit={login}
             >
               <Form.Item>
                 {getFieldDecorator('email', {
                   rules: [
                     {
-                      message: 'Required field.',
+                      message: 'Campo obrigatório.',
                       required: true,
                     },
                   ],
@@ -50,7 +53,7 @@ const Login = ({ form }) => {
                 {getFieldDecorator('password', {
                   rules: [
                     {
-                      message: 'Required field.',
+                      message: 'Campo obrigatório.',
                       required: true,
                     },
                   ],
